@@ -191,12 +191,11 @@ class PyZOS:
         self.__app = PythonStandaloneApplication()
         self.__ZOSAPI = self.__app.ZOSAPI
         self.__TheApplication = self.__app.TheApplication
-        self.__TheSystem = self.__app.TheSystem
 
         if self.__infile:
             self.__app.OpenFile(self.__infile, saveIfNeeded=False)
 
-        return self.__TheSystem
+        return self.__app
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         del self.__app
